@@ -25,7 +25,7 @@ public class Main {
             System.out.println("It's tie.");
         }
 
-        if (win(player, comp) == true) {
+        if (win(player, comp)) {
             return "You won!";
         }
         return "You lost!";
@@ -34,7 +34,7 @@ public class Main {
     static boolean win(char user, char opponent) {
         if (user == 'r' && opponent == 's') {
             return true;
-        } else if ((user == 's' && opponent == 'p')) {
+        } else if (user == 's' && opponent == 'p') {
             return true;
         } else if (user == 'p' && opponent == 'r') {
             return true;
