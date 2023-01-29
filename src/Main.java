@@ -32,9 +32,14 @@ public class Main {
     }
 
     static boolean win(char user, char opponent) {
-        if ((user == 'r' && opponent == 's') || (user == 's' && opponent == 'p') || (user == 'p' && opponent == 'r')) {
+        if (user == 'r' && opponent == 's') {
             return true;
+        } else if ((user == 's' && opponent == 'p')) {
+            return true;
+        } else if (user == 'p' && opponent == 'r') {
+            return true;
+        } else {
+            return false;
         }
-        return false;
     }
 }
