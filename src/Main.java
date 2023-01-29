@@ -8,7 +8,20 @@ public class Main {
     static Scanner keyboard = new Scanner(System.in);
     public static void main(String[] args) {
 
-        System.out.println(play());
+        System.out.print("Do you want to play rock, paper, scissors? (Y/N): ");
+        String player = keyboard.next().toUpperCase();
+        boolean game = true;
+        while (game) {
+            if (player.equals("Y")) {
+                System.out.println(play());
+                System.out.print("Do you want to play rock, paper, scissors? (Y/N): ");
+                player = keyboard.next().toUpperCase();
+            } else {
+                game = false;
+                System.out.println("Thanks for the game");
+            }
+        }
+
     }
 
     static String play() {
